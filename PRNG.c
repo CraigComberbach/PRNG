@@ -200,7 +200,7 @@ void randomTest()
 	return;
 }
 
-int True_16_bit_RNG_Generator(int channel, int *A2D_Buffer, int samples)
+int True_16_bit_RNG_Generator(int channel, volatile unsigned int *A2D_Buffer, int samples)
 {
 	//Cycles through each A2D sample and extracts the least significant bit, then places it into the final number accordingly
 	//It will not work with more than 16 samples

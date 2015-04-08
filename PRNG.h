@@ -23,6 +23,6 @@ extern void initializeRandomMT();
  * @param samples This indicated how many samples were taken. It will work with fewer than 16 samples, but 16 samples will give you a full two byte integer random number
  * @returns The truly random number is returned where it will be averaged and stored. If you have setup the A2D channel correctly, it should not alter it in anyway
  */
-int True_16_bit_RNG_Generator(int channel, int *A2D_Buffer, int samples);
+int True_16_bit_RNG_Generator(int channel, volatile unsigned int *A2D_Buffer, int samples);
 
 #endif // RANDOM_H_INCLUDED
